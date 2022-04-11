@@ -1,0 +1,33 @@
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#top {
+    height: 4vh;
+    width: 100%;
+}
+
+#middle{
+    display: flex;
+    justify-content: space-between;
+}
+
+#left, #right {
+    height: 85vh;
+    width: 2vw;
+}
+
+#play-area{
+    width: 94.95vw;
+    background-color: sandybrown;
+}
+
+#bottom {
+    height: 4vh;
+    width: 100%;
+}
+
+#top, #left, #right, #bottom {
+    background-color: black;
+}
