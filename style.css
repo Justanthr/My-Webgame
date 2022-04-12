@@ -20,7 +20,7 @@
 
 #play-area{
     width: 94.95vw;
-    background-color: sandybrown;
+    background-color: plum;
 }
 
 #bottom {
@@ -30,4 +30,8 @@
 
 #top, #left, #right, #bottom {
     background-color: black;
+}
+
+#score {
+    font-size: 3vh;
 }
