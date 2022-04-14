@@ -1,8 +1,12 @@
+//imp from other hs
 import { onSnake, expandSnake } from './snake.js'
+import { randomGridPosition } from './grid.js'
 
+//dec vars
 let food = getRandomFoodPosition()
-const EXPANSION_RATE = 5
+const EXPANSION_RATE = 1
 
+//functions
 export function update() {
   if (onSnake(food)) {
     expandSnake(EXPANSION_RATE)
