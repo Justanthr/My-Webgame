@@ -1,20 +1,22 @@
+//imp from other js
+import {onSnake, expandSnake} from './snake.js'
+
+//dec var
+let food = {x: 10, y: 3}
+const expantionRate = 1
+
 //food function
 export function update(){
-    const direction = getDirection()
-    for(let i = snakeBody.length - 2; i >= 0; i--) {
-       snakeBody[i + 1] = { ...snakeBody[i] }
-   }
-
-   snakeBody[0].x += direction.x
-   snakeBody[0].y += direction.y
+    if (onSnake(food)) {
+        expandSnake(expantionRate)
+        food = {x: 20, y: 3}
+    }
 }
 
 export function draw(gameBoard) {
-   snakeBody.forEach(segment => {
-       const snakeElement = document.createElement('div')
-       snakeElement.style.gridRowStart = segment.y
-       snakeElement.style.gridColumnStart = segment.x
-       snakeElement.classList.add('snake')
-       gameBoard.appendChild(snakeElement)
-   })
+       const foodElement = document.createElement('div')
+       foodElement.style.gridRowStart = food.y
+       foodElement.style.gridColumnStart = food.x
+       foodElement.classList.add('food')
+       gameBoard.appendChild(foodElement)
 }
